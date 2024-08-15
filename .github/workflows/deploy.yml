@@ -16,9 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
-    # Prevent job from running on forks
-    if: ${{ !github.event.repository.fork }}
-
     strategy:
       matrix:
         target:
