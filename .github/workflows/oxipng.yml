@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 60
 
     # Prevent tags and in-repo PRs from triggering this workflow more than once for a commit
-    if: github.ref_type != 'tag' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork)
+    if: github.ref_type != 'tag' && (github.event_name != 'pull_request')
 
     strategy:
       fail-fast: false
