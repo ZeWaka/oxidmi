@@ -143,6 +143,7 @@ fn collect_files(
                 let extension = input.extension().map(|f| f.to_ascii_lowercase());
                 extension != Some(OsString::from("png"))
                     && extension != Some(OsString::from("apng"))
+                    && extension != Some(OsString::from("dmi"))
             } {
                 continue;
             }
